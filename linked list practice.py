@@ -3,12 +3,12 @@ class Node:
         self.item=item
         self.next=next
 class SLL:
-    def __init__(self,start):
+    def __init__(self,start=None):
         self.start=start
     def is_empty(self):
-        self.start=None
+        return self.start is None
     def insert_at_first(self,data):
-        n=Node(data)
+        n=Node(data,self.start)
 
         self.start=n
     def insert_last(self,data):
